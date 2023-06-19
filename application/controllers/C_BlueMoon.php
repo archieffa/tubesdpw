@@ -27,7 +27,7 @@ class C_BlueMoon extends CI_Controller
 		if($this->form_validation->run() == FALSE)
 		{
 			$data['title'] = 'Blue Moon Hotel';
-			$this->load->view('V_Registration.php', $data);
+			$this->load->view('V_Registration', $data);
 		}
 		else
 		{
