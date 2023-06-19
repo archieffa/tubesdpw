@@ -11,12 +11,12 @@ class C_BlueMoon extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('V_Home.php');
+		$this->load->view('V_Home');
 	} 
 
 	public function login()
 	{
-		$this->load->view('V_Login.php');
+		$this->load->view('V_Login');
 	} 
 
 	public function registration()
