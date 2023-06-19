@@ -8,25 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title>
-        <?= $title; ?>
-    </title>
+    <title>Blue Moon</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/font-awesome.min.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/elegant-icons.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/flaticon.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/owl.carousel.min.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/nice-select.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/jquery-ui.min.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/magnific-popup.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/slicknav.min.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/style.css');?>">
 </head>
 
 <body>

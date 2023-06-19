@@ -14,23 +14,23 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/font-awesome.min.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/elegant-icons.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/flaticon.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/owl.carousel.min.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/nice-select.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/jquery-ui.min.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/magnific-popup.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/slicknav.min.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/style.css');?>">
 </head>
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
+    <!-- <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> -->
 
     <!-- Offcanvas Menu Section Begin -->
     <div class="offcanvas-menu-overlay"></div>
@@ -106,13 +106,12 @@
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <div class="language-option">
+							<div class="language-option">
                                 <img src="img/flag.jpg" alt="">
-                                <span>EN <i class="fa fa-angle-down"></i></span>
                                 <div class="flag-dropdown">
                                     <ul>
-                                        <li><a href="#">Zi</a></li>
-                                        <li><a href="#">Fr</a></li>
+									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Masuk</a></li>
+									<li><a href="<?php echo base_url('C_BlueMoon/registration');?>">Daftar</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -135,7 +134,7 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li><a href="./index.html">Home</a></li>
+								<li><a href="<?php echo base_url('C_BlueMoon/index');?>">Home</a></li>
                                     <li><a href="./rooms.html">Rooms</a></li>
                                     <li><a href="./about-us.html">About Us</a></li>
                                     <li><a href="./pages.html">Pages</a>

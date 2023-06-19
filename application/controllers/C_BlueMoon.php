@@ -17,17 +17,12 @@ class C_BlueMoon extends CI_Controller
 	public function login()
 	{
 		$this->load->view('V_Login');
-	}
+	} 
 
-	public function cekLogin(){
-		$user = $_POST['user'];
-        $pass = $_POST['pass'];
-		if ($user == "xxx" && $pass == "yyy") {
-			$this->gotoHome();
-		}else{
-			$this->index();
-		}
-	}
+	public function contact()
+	{
+		$this->load->view('V_contact');
+	} 
 
 	public function registration()
 	{
