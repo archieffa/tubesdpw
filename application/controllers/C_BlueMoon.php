@@ -9,12 +9,17 @@ class C_BlueMoon extends CI_Controller
 		$this->load->library('form_validation');
 	}
 
+	public function index()
+	{
+		$this->load->view('V_Home.php');
+	} 
+
 	public function login()
 	{
 		$this->load->view('V_Login.php');
 	} 
 
-	public function index()
+	public function registration()
 	{
 		$this->form_validation->set_rules('nama', 'Nama', 'required|trim');
 		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
