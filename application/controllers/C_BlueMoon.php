@@ -10,6 +10,7 @@ class C_BlueMoon extends CI_Controller
 		$this->load->library('form_validation');
 		$this->load->model('M_Contact');
 		$this->load->model('M_Customer');
+		$this->load->model('M_Kamar');
 	}
 
 	public function customerAdmin()
@@ -36,8 +37,11 @@ class C_BlueMoon extends CI_Controller
 	{
 		$this->load->view('V_ContactAdmin');
 	}
-	
-	
+
+	public function formkamar()
+	{
+		$this->load->view('V_FormKamar');
+	}
 	
 	public function linkContact(){
 		$data_contact = $this->M_Contact->getAll();
@@ -50,11 +54,7 @@ class C_BlueMoon extends CI_Controller
 		$this->M_Contact->DeleteDataContact($id_contact);
 		redirect (base_url('C_BlueMoon/linkContact'));
 	}
-
-	public function customeradmin()
-	{
-		$this->load->view('V_CustomerAdmin');
-	}
+	
 	
 	
 	
@@ -68,6 +68,23 @@ class C_BlueMoon extends CI_Controller
 	public function AksiDeletecustomer($id_customer){
 		$this->M_Customer->DeleteDataCustomer($id_customer);
 		redirect (base_url('C_BlueMoon/linkCustomer'));
+	}
+
+	public function kamaradmin()
+	{
+		$this->load->view('V_KamarAdmin');
+	}
+	
+	public function linkKamar(){
+		$data_contact = $this->M_Kamar->getAll();
+		$temp['data'] = $data_kamar;
+
+        $this->load->view('V_KamarAdmin',$temp);
+	}
+	
+	public function AksiDeleteKamar($id_kamar){
+		$this->M_Kamar->DeleteDataKamar($id_kamar);
+		redirect (base_url('C_BlueMoon/linkKamar'));
 	}
 
 	public function tambahcontact(){
@@ -84,6 +101,41 @@ class C_BlueMoon extends CI_Controller
 		$this->M_Contact->InsertDataContact($DataInsert);
 		redirect(base_url('C_BlueMoon/linkContact'));
 	}
+
+	public function tambahkamar(){
+		$type_room = $this->input->post('type_room');
+		$price_room = $this->input->post('price_room');
+		$size_room = $this->input->post('type_room');
+		$capacity_room = $this->input->post('price_room');
+		$bed_room = $this->input->post('type_room');
+		$services_room = $this->input->post('price_room');
+		$image_room = $_FILES['image_room'];
+		if($image_room = ''){}else{
+			$config['upload_path']  = './upload';
+			$config['allowed_types'] = 'jpg|png|gif|jpeg';
+
+			$this->load->library('upload', $config);
+			if(!$this->upload->do_upload('image_room')){
+				echo "Upload Gagal"; die();
+			}else{
+				$image_room=$this->upload->data('file_name');
+			}
+		}
+		$DataInsert = array(
+			'type_room' => $type_room,
+			'price_room' => $price_room,
+			'size_room' => $size_room,
+			'capacity_room' => $capacity_room,
+			'bed_room' => $bed_room,
+			'services_room' => $services_room,
+			'image_room' => $image_room,
+		);
+		
+		$this->M_Kamar->InsertDataKamar($DataInsert);
+		redirect(base_url('C_BlueMoon/linkKamar'));
+	}
+
+
 
 	public function login()
 	{
