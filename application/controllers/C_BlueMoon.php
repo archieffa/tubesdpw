@@ -8,6 +8,7 @@ class C_BlueMoon extends CI_Controller
 	{
 		parent::__construct();  // memanggil method construct yang ada di CI_Controller
 		$this->load->library('form_validation');
+		$this->load->model('M_Contact');
 	}
 
 	public function index()
@@ -61,7 +62,7 @@ class C_BlueMoon extends CI_Controller
 		);
 		
 		$this->M_Contact->InsertDataContact($DataInsert);
-		redirect (site_url('C_BlueMoon/contact'));
+		redirect ('C_BlueMoon/contact');
 	}
 
 	public function registration()

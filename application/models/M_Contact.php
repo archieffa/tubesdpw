@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_Contact extends CI_Controller {
+class M_Contact extends CI_Model {
 
 	/**
 	 * Index Page for this controller.
@@ -22,7 +22,6 @@ class M_Contact extends CI_Controller {
 	// {
 	// 	$this->load->view('welcome_message');
 	// }
-	
 
     public function getAll()
     {
