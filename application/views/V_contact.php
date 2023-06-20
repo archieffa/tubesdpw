@@ -191,7 +191,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7 offset-lg-1">
-				<form action="<?php echo site_url ('C_BlueMoon/tambahDataContact')?>" method ="post">
+				<form action="<?php echo site_url ('C_BlueMoon/tambahDataContact')?>" method ="post" class="contact-form">
                         <div class="row">
                             <div class="col-lg-6">
                                 <input type="text" name = "nama_contact" placeholder="Nama">
