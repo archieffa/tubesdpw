@@ -21,6 +21,11 @@ class C_BlueMoon extends CI_Controller
 		$this->load->view('V_contact');
 	} 
 
+	public function user()
+	{
+		$this->load->view('V_User');
+	} 
+
 	public function linkContact(){
 		// $data_contact = $this->M_Contact->getAll();
 		// $temp['data'] = $data_contact;
