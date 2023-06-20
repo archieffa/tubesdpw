@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_mitra extends CI_Controller {
+class M_Contact extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,15 +22,16 @@ class M_mitra extends CI_Controller {
 	// {
 	// 	$this->load->view('welcome_message');
 	// }
+	
 
     public function getAll()
     {
-        $query = $this->db->query("SELECT * from t_contact");
+        $query = $this->db->query("SELECT * from T_Contact");
 		return $query->result();
     }
 
 	public function InsertDataContact($data){
-		$this->db->insert('t_contact', $data);
+		$this->db->insert('T_Contact', $data);
 	}
 
 	public function EditDataContact($data, $id){
