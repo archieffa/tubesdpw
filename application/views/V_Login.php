@@ -39,14 +39,16 @@
                         
                         <?= $this->session->flashdata('message') ?>
 
-                        <form>
+                        <form method="post" action="<?= base_url('C_BlueMoon/login');?>">
                             <div class="check-date">
-                                <label>Email atau Nomor Telepon:</label>
-                                <input type="text" id="email" name="email">
+                                <label>Email:</label>
+                                <input type="text" id="email" name="email" value="<?= set_value('email'); ?>">
+                                <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
                             </div>
                             <div class="check-date">
                                 <label>Password:</label>
                                 <input type="password" id="password" name="password">
+                                <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
                             </div>
                             <button type="submit">Masuk</button>
                         </form>
