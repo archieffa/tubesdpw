@@ -38,14 +38,16 @@
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Buat Akun</h1>
                         </div>
-                        <form>
+                        <form method="post" action="<?= base_url('C_BlueMoon/registration');?>">
                             <div class="check-date">
                                 <label>Nama Lengkap:</label>
-                                <input type="text" id="nama" name="nama">
+                                <input type="text" id="nama_lengkap" name="nama_lengkap" value="<?= set_value('nama_lengkap'); ?>">
+                                <?= form_error('nama_lengkap', '<small class="text-danger">', '</small>'); ?>
                             </div>
                             <div class="check-date">
                                 <label>Alamat Email:</label>
                                 <input type="text" id="email" name="email">
+                                <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
                             </div>
                             <div class="check-date">
                                 <label>Nomor Telepon:</label>
@@ -53,7 +55,7 @@
                             </div>
                             <div class="check-date">
                                 <label for="date-in">Tanggal Lahir:</label>
-                                <input type="date" class="date-input" id="date-in" name="date-in">
+                                <input type="date" class="date-input" id="tanggal_lahir" name="tanggal_lahir">
                             </div>
                             <div class="select-option">
                                 <label for="guest">Jenis Kelamin:</label>
