@@ -191,17 +191,17 @@
                     </div>
                 </div>
                 <div class="col-lg-7 offset-lg-1">
-                    <form action="#" class="contact-form">
+				<form action="<?php echo site_url ('C_BlueMoon/tambahDataContact')?>" method ="post">
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Nama">
+                                <input type="text" name = "nama_contact" placeholder="Nama">
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Email">
+                                <input type="text" name = "email_contact" placeholder="Email">
                             </div>
                             <div class="col-lg-12">
-                                <textarea placeholder="Tulis pesan"></textarea>
-                                <button type="submit">Kirim Pesan</button>
+                                <textarea name = "pesan_contact" placeholder="Tulis pesan"></textarea>
+                                <button type="submit" value = "Simpan" >Kirim Pesan</button>
 								<button type="submit">Batal</button>
                             </div>
                         </div>

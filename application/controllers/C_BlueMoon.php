@@ -41,6 +41,28 @@ class C_BlueMoon extends CI_Controller
 		$this->load->view('V_contact');
 	} 
 
+	public function linkContact(){
+		$data_mitra = $this->M_mitra->getAll();
+		$temp['data'] = $data_mitra;
+        $temp['caption'] = "List of Mitra";
+        $this->load->view('V_mitra',$temp);
+	}
+
+	public function tambahcontact(){
+		$nama_contact = $this->input->post('nama_contact');
+		$email_contact = $this->input->post('email_contact');
+		$pesan_contact = $this->input->post('pesan_contact');
+
+		$DataInsert = array(
+			'nama_contact' => $nama_contact,
+			'email_contact' => $email_contact,
+			'pesan_contact' => $pesan_contact,
+		);
+		
+		$this->M_mitra->InsertDataContact($DataInsert);
+		redirect (site_url('C_BlueMoon/linkMitra'));
+	}
+
 	public function registration()
 	{
 		$this->form_validation->set_rules('nama_lengkap', 'Name', 'required|trim');
