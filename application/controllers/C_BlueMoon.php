@@ -26,13 +26,24 @@ class C_BlueMoon extends CI_Controller
 		$this->load->view('V_User');
 	} 
 
-	public function linkContact(){
-		// $data_contact = $this->M_Contact->getAll();
-		// $temp['data'] = $data_contact;
-        // $temp['caption'] = "List of Contact";
-        $this->load->view('V_contact');
+	public function contactadmin()
+	{
+		$this->load->view('V_ContactAdmin');
 	}
+	
+	
+	
+	public function linkContact(){
+		$data_contact = $this->M_Contact->getAll();
+		$temp['data'] = $data_contact;
 
+        $this->load->view('V_ContactAdmin',$temp);
+	}
+	
+	public function AksiDelete($id_contact){
+		$this->M_Contact->DeleteDataContact($id_contact);
+		redirect (base_url('C_BlueMoon/linkContact'));
+	}
 	public function tambahcontact(){
 		$nama_contact = $this->input->post('nama_contact');
 		$email_contact = $this->input->post('email_contact');
@@ -45,7 +56,7 @@ class C_BlueMoon extends CI_Controller
 		);
 		
 		$this->M_Contact->InsertDataContact($DataInsert);
-		redirect ('C_BlueMoon/contact');
+		redirect(base_url('C_BlueMoon/linkContact'));
 	}
 
 	public function login()

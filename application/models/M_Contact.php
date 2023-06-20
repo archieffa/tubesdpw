@@ -46,6 +46,6 @@ class M_Contact extends CI_Model {
 
 	public function DeleteDataContact($id){
 		$this->db->where('id_contact', $id);
-		$this->db->delete('t_contact');
+		$this->db->delete('T_Contact');
 	}
 }
