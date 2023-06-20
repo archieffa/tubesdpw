@@ -76,7 +76,7 @@ class C_BlueMoon extends CI_Controller
 	}
 	
 	public function linkKamar(){
-		$data_contact = $this->M_Kamar->getAll();
+		$data_kamar = $this->M_Kamar->getAll();
 		$temp['data'] = $data_kamar;
 
         $this->load->view('V_KamarAdmin',$temp);
@@ -87,11 +87,12 @@ class C_BlueMoon extends CI_Controller
 		redirect (base_url('C_BlueMoon/linkKamar'));
 	}
 
+	
 	public function tambahcontact(){
 		$nama_contact = $this->input->post('nama_contact');
 		$email_contact = $this->input->post('email_contact');
 		$pesan_contact = $this->input->post('pesan_contact');
-
+		
 		$DataInsert = array(
 			'nama_contact' => $nama_contact,
 			'email_contact' => $email_contact,
@@ -101,7 +102,7 @@ class C_BlueMoon extends CI_Controller
 		$this->M_Contact->InsertDataContact($DataInsert);
 		redirect(base_url('C_BlueMoon/linkContact'));
 	}
-
+	
 	public function tambahkamar(){
 		$type_room = $this->input->post('type_room');
 		$price_room = $this->input->post('price_room');
@@ -113,7 +114,7 @@ class C_BlueMoon extends CI_Controller
 		if($image_room = ''){}else{
 			$config['upload_path']  = './upload';
 			$config['allowed_types'] = 'jpg|png|gif|jpeg';
-
+			
 			$this->load->library('upload', $config);
 			if(!$this->upload->do_upload('image_room')){
 				echo "Upload Gagal"; die();
@@ -134,7 +135,39 @@ class C_BlueMoon extends CI_Controller
 		$this->M_Kamar->InsertDataKamar($DataInsert);
 		redirect(base_url('C_BlueMoon/linkKamar'));
 	}
+	
+	public function AksiEditKamar(){
+		$id_room = $this->input->post('id_room');
+		$type_room = $this->input->post('type_room');
+		$price_room = $this->input->post('price_room');
+		$size_room = $this->input->post('type_room');
+		$capacity_room = $this->input->post('price_room');
+		$bed_room = $this->input->post('type_room');
+		$services_room = $this->input->post('price_room');
+		$image_room = $_FILES['image_room'];
+		if($image_room = ''){}else{
+			$config['upload_path']  = './upload';
+			$config['allowed_types'] = 'jpg|png|gif|jpeg';
 
+			$this->load->library('upload', $config);
+			if(!$this->upload->do_upload('image_room')){
+				echo "Upload Gagal"; die();
+			}else{
+				$image_room=$this->upload->data('file_name');
+			}
+		}
+		$DataUpdate = array(
+			'type_room' => $type_room,
+			'price_room' => $price_room,
+			'size_room' => $size_room,
+			'capacity_room' => $capacity_room,
+			'bed_room' => $bed_room,
+			'services_room' => $services_room,
+			'image_room' => $image_room,
+		);
+		$this->M_Kamar->EditDataKamar($DataUpdate, $id_kamar);
+		redirect (site_url('C_Gelora/linkKamar'));
+	}
 
 
 	public function login()

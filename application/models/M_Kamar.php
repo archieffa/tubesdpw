@@ -39,6 +39,11 @@ class M_Kamar extends CI_Model {
 		$this->db->insert('T_Room', $data);
 	}
 
+	public function EditDataKamar($data, $id){
+		$this->db->where('id_room', $id);
+		$this->db->update('T_Room', $data);
+	}
+
 	public function DeleteDataKamar($id){
 		$this->db->where('id_room', $id);
 		$this->db->delete('T_Room');
