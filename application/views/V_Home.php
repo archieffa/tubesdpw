@@ -417,10 +417,9 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="testimonial-slider owl-carousel">
                         <div class="ts-item">
-                            <p>After a construction project took longer than expected, my husband, my daughter and I
-                                needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
-                                city, neighborhood and the types of housing options available and absolutely love our
-                                vacation at Sona Hotel.</p>
+                            <p>Kamarnya bersih. Fasilitasnya juga lengkap dan suasananya tenang. Lumayan menyenangkan
+                                nginap disini. Thanks Blue Moon.
+                            </p>
                             <div class="ti-author">
                                 <div class="rating">
                                     <i class="icon_star"></i>
@@ -429,15 +428,14 @@
                                     <i class="icon_star"></i>
                                     <i class="icon_star-half_alt"></i>
                                 </div>
-                                <h5> - Alexander Vasquez</h5>
+                                <h5> - Marcello Este Camarro</h5>
                             </div>
                             <img src="img/testimonial-logo.png" alt="">
                         </div>
                         <div class="ts-item">
-                            <p>After a construction project took longer than expected, my husband, my daughter and I
-                                needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
-                                city, neighborhood and the types of housing options available and absolutely love our
-                                vacation at Sona Hotel.</p>
+                            <p>Bagus banget! Kamarnya luas, peralatan lengkap. Sesuai sama foto dan keterangan. 
+                                Fasilitasnya juga lengkap dan servicenya baik. Pasti akan stay lagi di sini.
+                            </p>
                             <div class="ti-author">
                                 <div class="rating">
                                     <i class="icon_star"></i>
@@ -446,7 +444,55 @@
                                     <i class="icon_star"></i>
                                     <i class="icon_star-half_alt"></i>
                                 </div>
-                                <h5> - Alexander Vasquez</h5>
+                                <h5> - Junhyeon</h5>
+                            </div>
+                            <img src="img/testimonial-logo.png" alt="">
+                        </div>
+                        <div class="ts-item">
+                            <p>Interiornya bagus banget, super comfy and homey, recommended buat liburan sama temen
+                                /keluarga. Segala sudut di foto auto estetik!
+                            </p>
+                            <div class="ti-author">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                </div>
+                                <h5> - Syifa Azzahra</h5>
+                            </div>
+                            <img src="img/testimonial-logo.png" alt="">
+                        </div>
+                        <div class="ts-item">
+                            <p>Akomodasi ini cocok untuk menginap bersama teman ataupun keluarga, semuanya bagus. 
+                                Kekurangannya hanya di proses check-in dan check-out yang sedikit susah.
+                            </p>
+                            <div class="ti-author">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div>
+                                <h5> - Dokyeom</h5>
+                            </div>
+                            <img src="img/testimonial-logo.png" alt="">
+                        </div>
+                        <div class="ts-item">
+                            <p>Sesuai ekspektasi! Kamarnya bener-bener bagus dan estetik, yang terpenting bersih. 
+                                Host sangat ramah dan fast respon
+                            </p>
+                            <div class="ti-author">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                </div>
+                                <h5> - Amelia</h5>
                             </div>
                             <img src="img/testimonial-logo.png" alt="">
                         </div>
