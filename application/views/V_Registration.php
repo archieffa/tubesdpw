@@ -46,23 +46,27 @@
                             </div>
                             <div class="check-date">
                                 <label>Alamat Email:</label>
-                                <input type="text" id="email" name="email">
+                                <input type="text" id="email" name="email" value="<?= set_value('email'); ?>">
                                 <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
                             </div>
                             <div class="check-date">
-                                <label>Nomor Telepon:</label>
-                                <input type="text" id="no_telp" name="no_telp">
-                            </div>
-                            <div class="check-date">
                                 <label for="date-in">Tanggal Lahir:</label>
-                                <input type="date" class="date-input" id="tanggal_lahir" name="tanggal_lahir">
+                                <input type="date" class="date-input" id="tanggal_lahir" name="tanggal_lahir" value="<?= set_value('tanggal_lahir'); ?>">
+                                <?= form_error('tanggal_lahir', '<small class="text-danger">', '</small>'); ?>
                             </div>
                             <div class="select-option">
                                 <label for="guest">Jenis Kelamin:</label>
-                                <select id="guest" name="guest">
-                                    <option value="">Laki-Laki</option>
-                                    <option value="">Perempuan</option>
+                                <select id="jenis_kelamin" name="jenis_kelamin" value="<?= set_value('jenis_kelamin'); ?>">
+                                <?= form_error('jenis_kelamin', '<small class="text-danger">', '</small>'); ?>
+                                    <option value="0">Pilih</option>
+                                    <option value="1">Laki-Laki</option>
+                                    <option value="2">Perempuan</option>
                                 </select>
+                            </div>
+                            <div class="check-date">
+                                <label>Password:</label>
+                                <input type="password" id="password" name="password">
+                                <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
                             </div>
                             <button type="submit">Daftar</button>
                         </form>
