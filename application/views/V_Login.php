@@ -36,6 +36,9 @@
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Masuk</h1>
                         </div>
+                        
+                        <?= $this->session->flashdata('message') ?>
+
                         <form>
                             <div class="check-date">
                                 <label>Email atau Nomor Telepon:</label>
