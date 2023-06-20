@@ -11,6 +11,11 @@ class C_BlueMoon extends CI_Controller
 		$this->load->model('M_Contact');
 	}
 
+	public function customerAdmin()
+	{
+		$this->load->view('V_CustomerAdmin');
+	}
+
 	public function index()
 	{
 		$this->load->view('V_Home');
@@ -73,7 +78,7 @@ class C_BlueMoon extends CI_Controller
 		$password = $this->input->post('password');
 
 		// ke database
-		$user = $this->db->get_where('t_customer', ['email' => $email])->row_array();
+		$user = $this->db->get_where('t_user', ['email' => $email])->row_array();
 
 		// jika usernya ada
 		if($user)
@@ -87,7 +92,11 @@ class C_BlueMoon extends CI_Controller
 					'id_role' => $user['id_role']
 				];
 				$this->session->set_userdata($data);
-				redirect('C_Customer');
+
+				// if($user['id_role'] == 2)  // jika user merupakan admin
+				// {
+				// 	redirect('C_Customer');
+				// }
 			}
 			else
 			{
@@ -105,12 +114,12 @@ class C_BlueMoon extends CI_Controller
 	public function registration()
 	{
 		$this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required|trim');
-		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[t_customer.email]', ['is_unique ' => 'This email has already registered!']); 
+		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[t_user.email]', ['is_unique ' => 'Email sudah terdaftar!']); 
 		// is_unique = email tidak boleh duplikat, harus unik
 		// [nama tabel.nama field] = untuk cek apakah data yang diinput sudah ada di dalam database atau belum
 		$this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'required|trim');
 		$this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required|trim');
-		$this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[3]', ['min_length' => 'Password terlalu pendek']);	
+		$this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[3]', ['min_length' => 'Password terlalu pendek!']);	
 
 		if($this->form_validation->run() == FALSE)  // ketika validasi formnya gagal
 		{
@@ -126,10 +135,11 @@ class C_BlueMoon extends CI_Controller
 				'email' => $this->input->post('email'),
 				'tanggal_lahir' => $this->input->post('tanggal_lahir'),
 				'jenis_kelamin' => $this->input->post('jenis_kelamin'),
-				'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT)  // dienkripsi terlebih dahulu
+				'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),  // dienkripsi terlebih dahulu
+				'id_role' => 2
 			];
 			
-			$this->db->insert('t_customer', $data);
+			$this->db->insert('t_user', $data);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda berhasil membuat akun. Silahkan masuk dengan akun tersebut!</div>');  // notifikasi jika customer berhasil membuat akun
 			redirect('C_BlueMoon/login');  // jika data berhasil diinsert maka halaman dipindahkan ke halaman login
 		}
