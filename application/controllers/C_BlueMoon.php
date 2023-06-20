@@ -9,6 +9,7 @@ class C_BlueMoon extends CI_Controller
 		parent::__construct();  // memanggil method construct yang ada di CI_Controller
 		$this->load->library('form_validation');
 		$this->load->model('M_Contact');
+		$this->load->model('M_Customer');
 	}
 
 	public function index()
@@ -40,10 +41,30 @@ class C_BlueMoon extends CI_Controller
         $this->load->view('V_ContactAdmin',$temp);
 	}
 	
-	public function AksiDelete($id_contact){
+	public function AksiDeletecontact($id_contact){
 		$this->M_Contact->DeleteDataContact($id_contact);
 		redirect (base_url('C_BlueMoon/linkContact'));
 	}
+
+	public function customeradmin()
+	{
+		$this->load->view('V_CustomerAdmin');
+	}
+	
+	
+	
+	public function linkCustomer(){
+		$data_customer = $this->M_Customer->getAll();
+		$temp['data'] = $data_customer;
+
+        $this->load->view('V_CustomerAdmin',$temp);
+	}
+	
+	public function AksiDeletecustomer($id_customer){
+		$this->M_Customer->DeleteDataCustomer($id_customer);
+		redirect (base_url('C_BlueMoon/linkCustomer'));
+	}
+
 	public function tambahcontact(){
 		$nama_contact = $this->input->post('nama_contact');
 		$email_contact = $this->input->post('email_contact');

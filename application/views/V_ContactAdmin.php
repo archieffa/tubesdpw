@@ -201,7 +201,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<td><?php echo $dtm->nama_contact;?></td>
 				<td><?php echo $dtm->email_contact;?></td>
 				<td><?php echo $dtm->pesan_contact;?></td>
-				<td><a href="<?php echo base_url('C_BlueMoon/AksiDelete/').$dtm->id_contact;?>">Delete</a></p></td>
+				<td><a href="<?php echo base_url('C_BlueMoon/AksiDeleteContact/').$dtm->id_contact;?>">Delete</a></p></td>
 		  </tr>
 		  <?php
 		  $nomor++;
