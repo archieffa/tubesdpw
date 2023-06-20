@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<?php
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+//Tampilkan judul
+?>
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -14,7 +23,11 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
+<<<<<<< HEAD
 	<link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css');?>">
+=======
+    <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css');?>">
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
     <link rel="stylesheet" href="<?php echo base_url('css/font-awesome.min.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('css/elegant-icons.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('css/flaticon.css');?>">
@@ -41,7 +54,11 @@
         <div class="canvas-close">
             <i class="icon_close"></i>
         </div>
+<<<<<<< HEAD
         <div class="search-icon search-switch">
+=======
+        <div class="search-icon  search-switch">
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
             <i class="icon_search"></i>
         </div>
         <div class="header-configure-area">
@@ -50,11 +67,20 @@
                 <span>EN <i class="fa fa-angle-down"></i></span>
                 <div class="flag-dropdown">
                     <ul>
+<<<<<<< HEAD
                         <li><a href="#">Zi</a></li>
                         <li><a href="#">Fr</a></li>
                     </ul>
                 </div>
             </div>
+=======
+                        <li><a href="<?php echo site_url('C_BlueMoon/login');?>">Masuk</a></li>
+                        <li><a href="V_Registration.php">Daftar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="bk-btn">Booking Now</a>
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
         </div>
         <nav class="mainmenu mobile-menu">
             <ul>
@@ -64,7 +90,11 @@
                 <li><a href="./pages.html">Pages</a>
                     <ul class="dropdown">
                         <li><a href="./room-details.html">Room Details</a></li>
+<<<<<<< HEAD
                         <li><a href="./blog-details.html">Blog Details</a></li>
+=======
+                        <li><a href="#">Deluxe Room</a></li>
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
                         <li><a href="#">Family Room</a></li>
                         <li><a href="#">Premium Room</a></li>
                     </ul>
@@ -82,13 +112,21 @@
         </div>
         <ul class="top-widget">
             <li><i class="fa fa-phone"></i> (+62) 851-7898-1265</li>
+<<<<<<< HEAD
             <li><i class="fa fa-envelope"></i> bulemoon@gmail.com</li>
+=======
+            <li><i class="fa fa-envelope"></i> bluemoon@gmail.com</li>
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
         </ul>
     </div>
     <!-- Offcanvas Menu Section End -->
 
     <!-- Header Section Begin -->
+<<<<<<< HEAD
     <header class="header-section header-normal">
+=======
+    <header class="header-section">
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
         <div class="top-nav">
             <div class="container">
                 <div class="row">
@@ -106,8 +144,14 @@
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
+<<<<<<< HEAD
 							<div class="language-option">
                                 <img src="img/flag.jpg" alt="">
+=======
+                            <a href="#" class="bk-btn">Booking Now</a>
+                            <div class="language-option">
+                                <span><i class="fa fa-angle-down"></i></span>
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
                                 <div class="flag-dropdown">
                                     <ul>
 									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Masuk</a></li>
@@ -126,7 +170,11 @@
                     <div class="col-lg-2">
                         <div class="logo">
                             <a href="./index.html">
+<<<<<<< HEAD
                                 <img src="img/BLUE MOON.png" style="width: 500px;" alt="">
+=======
+                                <img src="img/BLUE MOON.png" style = "width: 500px;"alt="">
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
                             </a>
                         </div>
                     </div>
@@ -134,7 +182,11 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
+<<<<<<< HEAD
 								<li><a href="<?php echo base_url('C_BlueMoon/index');?>">Home</a></li>
+=======
+                                    <li class="active"><a href="./index.html">Home</a></li>
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
                                     <li><a href="./rooms.html">Rooms</a></li>
                                     <li><a href="./about-us.html">About Us</a></li>
                                     <li><a href="./pages.html">Pages</a>
@@ -146,7 +198,11 @@
                                         </ul>
                                     </li>
                                     <li><a href="./blog.html">News</a></li>
+<<<<<<< HEAD
                                     <li class="active"><a href="./contact.html">Contact</a></li>
+=======
+                                    <li><a href="<?php echo base_url('C_BlueMoon/contact');?>">Contact</a></li>
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
                                 </ul>
                             </nav>
                             <div class="nav-right search-switch">
@@ -160,6 +216,7 @@
     </header>
     <!-- Header End -->
 
+<<<<<<< HEAD
     <div class="content">
         <div class="container">
             <br>
@@ -223,6 +280,119 @@
     </div>
 
     
+=======
+	<body>
+  
+
+  <div class="content">
+    
+    <div class="container">
+      <h2 class="mb-5">DATA CUSTOMER</h2>
+
+      <div class="table-responsive">
+
+        <table class="table custom-table">
+          <thead>
+            <tr>
+              
+              <th scope="col">No</th>
+              <th scope="col">Nama Lengkap</th>
+              <th scope="col">Email</th>
+              <th scope="col">Tanggal Lahir</th>
+			  <th scope="col">Jenis Kelamin</th>
+			  <th scope="col">Password</th>
+			  <th scope="col" colspan = "2">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+			
+		  <?php
+
+		  $nomor = 1;
+		  foreach ($data as $dtm){
+			?>
+			<tr>
+				<td><?php echo $nomor;?></td>
+				<td><?php echo $dtm->nama_lengkap;?></td>
+				<td><?php echo $dtm->email;?></td>
+				<td><?php echo $dtm->tanggal_lahir;?></td>
+				<td><?php echo $dtm->jenis_kelamin;?></td>
+				<td><?php echo $dtm->password;?></td>
+				<td><a href="<?php echo base_url('C_BlueMoon/AksiDelete/').$dtm->id_customer;?>">Delete</a></p></td>
+		  </tr>
+		  <?php
+		  $nomor++;
+		  }
+		  ?>
+            <!-- <tr scope="row">
+
+              
+                      
+                      <td>
+                        1392
+                      </td>
+                      <td>James Yates</td>
+                      <td>
+                        Web Designer
+                        <small class="d-block">Far far away, behind the word mountains</small>
+                      </td>
+                      <td>+63 983 0962 971</td>
+                      <td>NY University</td>
+            
+            </tr>
+
+            <tr>
+              
+              <td>4616</td>
+              <td>Matthew Wasil</td>
+              <td>
+                Graphic Designer
+                <small class="d-block">Far far away, behind the word mountains</small>
+              </td>
+              <td>+02 020 3994 929</td>
+              <td>London College</td>
+            </tr>
+            <tr>
+              
+              <td>9841</td>
+              <td>Sampson Murphy</td>
+              <td>
+                Mobile Dev
+                <small class="d-block">Far far away, behind the word mountains</small>
+              </td>
+              <td>+01 352 1125 0192</td>
+              <td>Senior High</td>
+            </tr>
+            <tr>
+              
+              <td>9548</td>
+              <td>Gaspar Semenov</td>
+              <td>
+                Illustrator
+                <small class="d-block">Far far away, behind the word mountains</small>
+              </td>
+              <td>+92 020 3994 929</td>
+              <td>College</td>
+            </tr> -->
+            
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
@@ -247,7 +417,11 @@
                     </div>
                     <div class="col-lg-3 offset-lg-1">
                         <div class="ft-contact">
+<<<<<<< HEAD
                             <h6>Hubungi Kami</h6>
+=======
+                            <h6>Contact Us</h6>
+>>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
                             <ul>
                                 <li>(+62) 851-7898-1265</li>
                                 <li>bluemoon@gmail.com</li>

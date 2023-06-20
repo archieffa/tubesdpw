@@ -134,7 +134,7 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-								<li><a href="<?php echo base_url('C_BlueMoon/index');?>">Home</a></li>
+								<li><a href="<?php echo base_url('C_BlueMoon/');?>">Home</a></li>
                                     <li><a href="./rooms.html">Rooms</a></li>
                                     <li><a href="./about-us.html">About Us</a></li>
                                     <li><a href="./pages.html">Pages</a>

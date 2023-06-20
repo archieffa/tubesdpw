@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_Contact extends CI_Model {
+class M_Customer extends CI_Model {
 
 	/**
 	 * Index Page for this controller.
@@ -25,27 +25,18 @@ class M_Contact extends CI_Model {
 
     public function getAll()
     {
-        $query = $this->db->query("SELECT * from T_Contact");
+        $query = $this->db->query("SELECT * from T_Customer");
 		return $query->result();
     }
 
-	public function InsertDataContact($data){
-		$this->db->insert('T_Contact', $data);
-	}
-
-	public function EditDataContact($data, $id){
-		$this->db->where('id_contact', $id);
-		$this->db->update('t_contact', $data);
-	}
-
-	public function getDataContactDetail($id){
-		$this->db->where('id_contact', $id);
-		$query = $this->db->get('t_contact');
+	public function getDataCustomerDetail($id){
+		$this->db->where('id_customer', $id);
+		$query = $this->db->get('T_Customer');
 		return $query->row();
 	}
 
-	public function DeleteDataContact($id){
-		$this->db->where('id_contact', $id);
-		$this->db->delete('T_Contact');
+	public function DeleteDataCustomer($id){
+		$this->db->where('id_customer', $id);
+		$this->db->delete('T_Customer');
 	}
 }
