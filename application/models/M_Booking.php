@@ -34,6 +34,10 @@ class M_Booking extends CI_Model {
 		$query = $this->db->get('T_Booking');
 		return $query->row();
 	}
+	public function InsertDataBooking($data){
+		$this->db->insert('T_Booking', $data);
+	}
+
 
 	public function DeleteDataBooking($id){
 		$this->db->where('id_booking', $id);
