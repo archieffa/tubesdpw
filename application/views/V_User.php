@@ -128,8 +128,12 @@
         <div class="container">
             <div class="row">
                     <div class="hero-text">
+<<<<<<< HEAD
                         
                         <center><h1>Selamat Datang, <?= $user['nama_lengkap']; ?></h1></center>
+=======
+                        <center><h1>Selamat Datang, <?php echo $this->session->userdata('nama_lengkap');?></h1></center>
+>>>>>>> cba966ddf0c4dcb4e108ae924d03092838fa8b3a
                         <center><p>Tingkatkan pengalaman Anda dengan menginap di hotel kami. Dengan lokasi strategis di pusat kota, 
 							Anda dapat menjelajahi atraksi lokal dengan mudah dan mengisi hari-hari Anda dengan petualangan yang tak terlupakan.</p></center>
                         <center><a href="#" class="primary-btn">Discover Now</a></center>

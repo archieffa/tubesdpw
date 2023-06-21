@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 //Tampilkan judul
 ?>
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -23,11 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-<<<<<<< HEAD
-	<link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css');?>">
-=======
     <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css');?>">
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
     <link rel="stylesheet" href="<?php echo base_url('css/font-awesome.min.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('css/elegant-icons.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('css/flaticon.css');?>">
@@ -54,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="canvas-close">
             <i class="icon_close"></i>
         </div>
-        <div class="search-icon search-switch">
+        <div class="search-icon  search-switch">
             <i class="icon_search"></i>
         </div>
         <div class="header-configure-area">
@@ -96,21 +89,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <ul class="top-widget">
             <li><i class="fa fa-phone"></i> (+62) 851-7898-1265</li>
-<<<<<<< HEAD
-            <li><i class="fa fa-envelope"></i> bulemoon@gmail.com</li>
-=======
             <li><i class="fa fa-envelope"></i> bluemoon@gmail.com</li>
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
         </ul>
     </div>
     <!-- Offcanvas Menu Section End -->
 
     <!-- Header Section Begin -->
-<<<<<<< HEAD
-    <header class="header-section header-normal">
-=======
     <header class="header-section">
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
         <div class="top-nav">
             <div class="container">
                 <div class="row">
@@ -128,14 +113,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-<<<<<<< HEAD
-							<div class="language-option">
-                                <img src="img/flag.jpg" alt="">
-=======
                             <a href="#" class="bk-btn">Booking Now</a>
                             <div class="language-option">
                                 <span><i class="fa fa-angle-down"></i></span>
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
                                 <div class="flag-dropdown">
                                     <ul>
 									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Masuk</a></li>
@@ -189,114 +169,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Header End -->
 
 	<body>
+		<center><h1>ISI DATA KAMAR<h1></center>
   
-
-  <div class="content">
-    
-    <div class="container">
-      <h2 class="mb-5">DATA CUSTOMER</h2>
-
-      <div class="table-responsive">
-
-        <table class="table custom-table">
-          <thead>
-            <tr>
-              
-              <th scope="col">No</th>
-              <th scope="col">Nama Lengkap</th>
-              <th scope="col">Email</th>
-              <th scope="col">Tanggal Lahir</th>
-			  <th scope="col">Jenis Kelamin</th>
-			  <th scope="col">Password</th>
-			  <th scope="col" colspan = "2">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-			
-		  <?php
-
-		  $nomor = 1;
-		  foreach ($data as $dtm){
-			?>
-			<tr>
-				<td><?php echo $nomor;?></td>
-				<td><?php echo $dtm->nama_lengkap;?></td>
-				<td><?php echo $dtm->email;?></td>
-				<td><?php echo $dtm->tanggal_lahir;?></td>
-				<td><?php echo $dtm->jenis_kelamin;?></td>
-				<td><?php echo $dtm->password;?></td>
-				<td><a href="<?php echo base_url('C_BlueMoon/AksiDelete/').$dtm->id_customer;?>">Delete</a></p></td>
-		  </tr>
-		  <?php
-		  $nomor++;
-		  }
-		  ?>
-            <!-- <tr scope="row">
-
-              
-                      
-                      <td>
-                        1392
-                      </td>
-                      <td>James Yates</td>
-                      <td>
-                        Web Designer
-                        <small class="d-block">Far far away, behind the word mountains</small>
-                      </td>
-                      <td>+63 983 0962 971</td>
-                      <td>NY University</td>
-            
-            </tr>
-
-            <tr>
-              
-              <td>4616</td>
-              <td>Matthew Wasil</td>
-              <td>
-                Graphic Designer
-                <small class="d-block">Far far away, behind the word mountains</small>
-              </td>
-              <td>+02 020 3994 929</td>
-              <td>London College</td>
-            </tr>
-            <tr>
-              
-              <td>9841</td>
-              <td>Sampson Murphy</td>
-              <td>
-                Mobile Dev
-                <small class="d-block">Far far away, behind the word mountains</small>
-              </td>
-              <td>+01 352 1125 0192</td>
-              <td>Senior High</td>
-            </tr>
-            <tr>
-              
-              <td>9548</td>
-              <td>Gaspar Semenov</td>
-              <td>
-                Illustrator
-                <small class="d-block">Far far away, behind the word mountains</small>
-              </td>
-              <td>+92 020 3994 929</td>
-              <td>College</td>
-            </tr> -->
-            
-          </tbody>
-        </table>
-      </div>
-
-
-    </div>
-
-  </div>
-    
-    
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+	<?php echo form_open_multipart('C_BlueMoon/tambahkamar');?>
+							<div class="contact-form">
+                            <center><div class="col-lg-6">
+                                <input type="text" name = "type room" placeholder="Tipe Kamar">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" name = "price_room" placeholder="Harga Kamar">
+                            </div>
+							<div class="col-lg-6">
+                                <input type="text" name = "size_room" placeholder="Ukuran Kamar">
+                            </div>
+							<div class="col-lg-6">
+                                <input type="text" name = "capacity_room" placeholder="Kapasitas Kamar">
+                            </div>
+							<div class="col-lg-6">
+                                <input type="text" name = "bed_room" placeholder="Kasur Kamar">
+                            </div>
+							<div class="col-lg-6">
+                                <input type="text" name = "services_room" placeholder="Fasilitas Kamar">
+                            </div>
+							<div class="col-lg-6">
+                                <input type="file" name = "image_room">
+                            </div>
+                                <button type="submit" value = "Upload" >Tambah Data</button>
+								<button type="submit">Batal</button>
+                            </div></center>
+</div>
+                    <?php echo form_close(); ?>
+					<br>
+					<br>
   </body>
 
     <!-- Footer Section Begin -->
@@ -323,11 +227,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div class="col-lg-3 offset-lg-1">
                         <div class="ft-contact">
-<<<<<<< HEAD
-                            <h6>Hubungi Kami</h6>
-=======
                             <h6>Contact Us</h6>
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
                             <ul>
                                 <li>(+62) 851-7898-1265</li>
                                 <li>bluemoon@gmail.com</li>
