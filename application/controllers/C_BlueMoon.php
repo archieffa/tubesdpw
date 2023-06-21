@@ -106,10 +106,10 @@ class C_BlueMoon extends CI_Controller
 	public function tambahkamar(){
 		$type_room = $this->input->post('type_room');
 		$price_room = $this->input->post('price_room');
-		$size_room = $this->input->post('type_room');
-		$capacity_room = $this->input->post('price_room');
-		$bed_room = $this->input->post('type_room');
-		$services_room = $this->input->post('price_room');
+		$size_room = $this->input->post('size_room');
+		$capacity_room = $this->input->post('capacity_room');
+		$bed_room = $this->input->post('bed_room');
+		$services_room = $this->input->post('services_room');
 		$image_room = $_FILES['image_room'];
 		if($image_room = ''){}else{
 			$config['upload_path']  = './upload';
@@ -135,15 +135,22 @@ class C_BlueMoon extends CI_Controller
 		$this->M_Kamar->InsertDataKamar($DataInsert);
 		redirect(base_url('C_BlueMoon/linkKamar'));
 	}
+
+	public function editKamar($id){
+		$recordKamar= $this->M_Kamar->getDataKamarDetail($id);
+		$DATA = array('data_room' =>$recordKamar);
+		$this->load->view('V_editKamar', $DATA);
+
+	}
 	
 	public function AksiEditKamar(){
 		$id_room = $this->input->post('id_room');
 		$type_room = $this->input->post('type_room');
 		$price_room = $this->input->post('price_room');
-		$size_room = $this->input->post('type_room');
-		$capacity_room = $this->input->post('price_room');
-		$bed_room = $this->input->post('type_room');
-		$services_room = $this->input->post('price_room');
+		$size_room = $this->input->post('size_room');
+		$capacity_room = $this->input->post('capacity_room');
+		$bed_room = $this->input->post('bed_room');
+		$services_room = $this->input->post('services_room');
 		$image_room = $_FILES['image_room'];
 		if($image_room = ''){}else{
 			$config['upload_path']  = './upload';
@@ -151,7 +158,6 @@ class C_BlueMoon extends CI_Controller
 
 			$this->load->library('upload', $config);
 			if(!$this->upload->do_upload('image_room')){
-				echo "Upload Gagal"; die();
 			}else{
 				$image_room=$this->upload->data('file_name');
 			}
@@ -165,8 +171,8 @@ class C_BlueMoon extends CI_Controller
 			'services_room' => $services_room,
 			'image_room' => $image_room,
 		);
-		$this->M_Kamar->EditDataKamar($DataUpdate, $id_kamar);
-		redirect (site_url('C_Gelora/linkKamar'));
+		$this->M_Kamar->EditDataKamar($DataUpdate, $id_room);
+		redirect (base_url('C_BlueMoon/linkKamar'));
 	}
 
 

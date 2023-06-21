@@ -210,7 +210,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<td><?php echo $dtm->services_room;?></td>
 				<td><img src = "<?php echo base_url();?>upload/<?php echo $dtm->image_room;?>">
 			</td>
-				<td><a href="<?php echo base_url('C_BlueMoon/AksiEditKamar/').$dtm->id_room;?>"">Edit</a></p></td>
+				<td><a href="<?php echo base_url('C_BlueMoon/editkamar/').$dtm->id_room;?>">Edit</a></p></td>
 				<td><a href="<?php echo base_url('C_BlueMoon/AksiDeleteKamar/').$dtm->id_room;?>">Delete</a></p></td>
 		  </tr>
 		  <?php

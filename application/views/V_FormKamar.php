@@ -194,7 +194,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="col-lg-6">
                                 <input type="file" name = "image_room">
                             </div>
-                                <button type="submit" value = "Upload" >Kirim Pesan</button>
+                                <button type="submit" value = "Upload" >Tambah Data</button>
 								<button type="submit">Batal</button>
                             </div></center>
 </div>

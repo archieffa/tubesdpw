@@ -169,9 +169,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Header End -->
 
 	<body>
-		<center><h1>ISI DATA KAMAR<h1></center>
+		<center><h1>EDIT DATA KAMAR<h1></center>
   
-	<?php echo form_open_multipart('C_BlueMoon/tambahkamar');?>
+	<?php echo form_open_multipart('C_BlueMoon/AksiEditKamar');?>
 							<div class="contact-form">
                             <center><div class="col-lg-6">
 							<input type="hidden" value="<?php echo $data_room->id_room?>" name="id_room">
@@ -193,9 +193,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <input type="text" value="<?php echo $data_room->services_room ?>" name = "services_room">
                             </div>
 							<div class="col-lg-6">
-                                <input type="file" value="<?php echo $data_room->image_room ?>" name = "image_room">
+                                <input type="file" name = "image_room">
                             </div>
-                                <button type="submit" value = "Upload" >Kirim Pesan</button>
+                                <button type="submit" value = "Upload" >Edit</button>
 								<button type="submit">Batal</button>
                             </div></center>
 </div>
