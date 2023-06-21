@@ -1,9 +1,3 @@
-<?php
-
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-//Tampilkan judul
-?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -37,66 +31,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-    <!-- Page Preloder -->
-    <!-- <div id="preloder">
-        <div class="loader"></div>
-    </div> -->
-
-    <!-- Offcanvas Menu Section Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="canvas-open">
-        <i class="icon_menu"></i>
-    </div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="canvas-close">
-            <i class="icon_close"></i>
-        </div>
-        <div class="search-icon  search-switch">
-            <i class="icon_search"></i>
-        </div>
-        <div class="header-configure-area">
-        <div class="language-option">
-                                <span>Akun</span>
-                                <div class="flag-dropdown">
-                                    <ul>
-									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Profil Saya</a></li>
-									<li><a href="<?php echo site_url('C_BlueMoon/logout');?>" data-togle="modal" data-target="#logoutModal">Keluar</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-            <a href="#" class="bk-btn">Booking Now</a>
-        </div>
-        <nav class="mainmenu mobile-menu">
-            <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./rooms.html">Rooms</a></li>
-                <li><a href="./about-us.html">About Us</a></li>
-                <li><a href="./pages.html">Pages</a>
-                    <ul class="dropdown">
-                        <li><a href="./room-details.html">Room Details</a></li>
-                        <li><a href="#">Deluxe Room</a></li>
-                        <li><a href="#">Family Room</a></li>
-                        <li><a href="#">Premium Room</a></li>
-                    </ul>
-                </li>
-                <li><a href="./blog.html">News</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-        <div class="top-social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-tripadvisor"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-        </div>
-        <ul class="top-widget">
-            <li><i class="fa fa-phone"></i> (+62) 851-7898-1265</li>
-            <li><i class="fa fa-envelope"></i> bluemoon@gmail.com</li>
-        </ul>
-    </div>
-    <!-- Offcanvas Menu Section End -->
-
     <!-- Header Section Begin -->
     <header class="header-section">
         <div class="top-nav">
@@ -118,11 +52,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <a href="#" class="bk-btn">Booking Now</a>
                             <div class="language-option">
-                                <span><i class="fa fa-angle-down"></i></span>
+                                <span>Akun</span>
                                 <div class="flag-dropdown">
                                     <ul>
-									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Masuk</a></li>
-									<li><a href="<?php echo base_url('C_BlueMoon/registration');?>">Daftar</a></li>
+									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Profil Saya</a></li>
+									<li><a href="<?php echo site_url('C_BlueMoon/logout');?>" data-togle="modal" data-target="#logoutModal">Keluar</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -162,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </nav>
                             <div class="nav-right search-switch">
                                 <i class="icon_search"></i>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -171,41 +105,153 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </header>
     <!-- Header End -->
 
-	<body>
-		<center><h1>EDIT DATA KAMAR<h1></center>
-  
-	<?php echo form_open_multipart('C_BlueMoon/AksiEditKamar');?>
-							<div class="contact-form">
-                            <center><div class="col-lg-6">
-							<input type="hidden" value="<?php echo $data_room->id_room?>" name="id_room">
-                                <input type="text" value="<?php echo $data_room->type_room ?>" name = "type room">
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="text" value="<?php echo $data_room->price_room ?>" name = "price_room">
-                            </div>
-							<div class="col-lg-6">
-                                <input type="text" value="<?php echo $data_room->size_room ?>" name = "size_room">
-                            </div>
-							<div class="col-lg-6">
-                                <input type="text" value="<?php echo $data_room->capacity_room ?>" name = "capacity_room">
-                            </div>
-							<div class="col-lg-6">
-                                <input type="text" value="<?php echo $data_room->bed_room ?>" name = "bed_room">
-                            </div>
-							<div class="col-lg-6">
-                                <input type="text" value="<?php echo $data_room->services_room ?>" name = "services_room">
-                            </div>
-							<div class="col-lg-6">
-                                <input type="file" name = "image_room">
-                            </div>
-                                <button type="submit" value = "Upload" >Edit</button>
-								<button type="submit">Batal</button>
-                            </div></center>
-</div>
-                    <?php echo form_close(); ?>
-					<br>
-					<br>
-  </body>
+    <!-- Breadcrumb Section Begin -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>Our Rooms</h2>
+                        <div class="bt-option">
+                            <a href="./home.html">Home</a>
+                            <span>Rooms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Rooms Section Begin -->
+    <section class="rooms-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item">
+                        <img src="img/room/room-1.jpg" alt="">
+                        <div class="ri-text">
+                            <h4>Premium King Room</h4>
+                            <h3>Rp 5.000.000<span>/Pernight</span></h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="r-o">Size:</td>
+                                        <td>30 ft</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Capacity:</td>
+                                        <td>Max persion 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Bed:</td>
+                                        <td>King Beds</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Services:</td>
+                                        <td>Wifi, Television, Bathroom,...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item">
+                        <img src="img/room/room-2.jpg" alt="">
+                        <div class="ri-text">
+                            <h4>Deluxe Room</h4>
+                            <h3>Rp 4.300.000<span>/Pernight</span></h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="r-o">Size:</td>
+                                        <td>30 ft</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Capacity:</td>
+                                        <td>Max persion 5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Bed:</td>
+                                        <td>King Beds</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Services:</td>
+                                        <td>Wifi, Television, Bathroom,...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item">
+                        <img src="img/room/room-3.jpg" alt="">
+                        <div class="ri-text">
+                            <h4>Double Room</h4>
+                            <h3>Rp 3.100.000<span>/Pernight</span></h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="r-o">Size:</td>
+                                        <td>30 ft</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Capacity:</td>
+                                        <td>Max persion 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Bed:</td>
+                                        <td>King Beds</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Services:</td>
+                                        <td>Wifi, Television, Bathroom,...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item">
+                        <img src="img/room/room-4.jpg" alt="">
+                        <div class="ri-text">
+                            <h4>Suite Room</h4>
+                            <h3>Rp 2.500.000<span>/Pernight</span></h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="r-o">Size:</td>
+                                        <td>30 ft</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Capacity:</td>
+                                        <td>Max persion 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Bed:</td>
+                                        <td>King Beds</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-o">Services:</td>
+                                        <td>Wifi, Television, Bathroom,...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="room-pagination">
+                        <a href="rooms1.html">❮</a>
+                        <a href="rooms2.html">❯</a>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- Rooms Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer-section">
@@ -216,7 +262,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="ft-about">
                             <div class="logo">
                                 <a href="#">
-                                    <img src="img/BLUE MOON.png" alt="">
+                                    <img src="img/footer-logo.png" alt="">
                                 </a>
                             </div>
                             <p>We inspire and reach millions of travelers<br /> across 90 local websites</p>
@@ -233,13 +279,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="ft-contact">
                             <h6>Contact Us</h6>
                             <ul>
-                                <li>(+62) 851-7898-1265</li>
-                                <li>bluemoon@gmail.com</li>
+                                <li>(12) 345 67890</li>
+                                <li>info.colorlib@gmail.com</li>
                                 <li>856 Cordia Extension Apt. 356, Lake, United State</li>
                             </ul>
                         </div>
                     </div>
-                    <!-- <div class="col-lg-3 offset-lg-1">
+                    <div class="col-lg-3 offset-lg-1">
                         <div class="ft-newslatter">
                             <h6>New latest</h6>
                             <p>Get the latest updates and offers.</p>
@@ -248,7 +294,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <button type="submit"><i class="fa fa-send"></i></button>
                             </form>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -297,3 +343,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </body>
 
 </html>
+</body>

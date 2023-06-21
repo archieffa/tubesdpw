@@ -7,15 +7,7 @@
     <meta name="keywords" content="Sona, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< HEAD
-    <title>Blue Moon Hotel</title>
-
-    <!-- Favicons -->
-    <link href="img/BLUE_MOON.jpg" rel="icon">
-    <link href="img/BLUE_MOON.jpg" rel="apple-touch-icon">
-=======
     <title>Blue Moon</title>
->>>>>>> 3d89f92c3f4ea57f93cd372548294af0b4029072
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
@@ -53,16 +45,15 @@
             <i class="icon_search"></i>
         </div>
         <div class="header-configure-area">
-            <div class="language-option">
-                <img src="img/flag.jpg" alt="">
-                <span>EN <i class="fa fa-angle-down"></i></span>
-                <div class="flag-dropdown">
-                    <ul>
-                        <li><a href="#">Zi</a></li>
-                        <li><a href="#">Fr</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div class="language-option">
+                                <span>Akun</span>
+                                <div class="flag-dropdown">
+                                    <ul>
+									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Profil Saya</a></li>
+									<li><a href="<?php echo site_url('C_BlueMoon/logout');?>" data-togle="modal" data-target="#logoutModal">Keluar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
             <a href="#" class="bk-btn">Booking Now</a>
         </div>
         <nav class="mainmenu mobile-menu">

@@ -57,7 +57,7 @@
                             </div>
                             <a href="#" class="bk-btn">Booking Now</a>
                             <div class="language-option">
-                                <span><i class="fa fa-angle-down"></i></span>
+                                <span>Akun</span>
                                 <div class="flag-dropdown">
                                     <ul>
 									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Profil Saya</a></li>

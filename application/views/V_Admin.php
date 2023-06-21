@@ -111,11 +111,11 @@
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
 							<div class="language-option">
-                                <img src="img/flag.jpg" alt="">
+                                <span>Akun</span>
                                 <div class="flag-dropdown">
                                     <ul>
-									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Masuk</a></li>
-									<li><a href="<?php echo base_url('C_BlueMoon/registration');?>">Daftar</a></li>
+									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Profil Saya</a></li>
+									<li><a href="<?php echo site_url('C_BlueMoon/logout');?>" data-togle="modal" data-target="#logoutModal">Keluar</a></li>
                                     </ul>
                                 </div>
                             </div>
