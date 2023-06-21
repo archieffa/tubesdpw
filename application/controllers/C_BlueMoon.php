@@ -11,6 +11,9 @@ class C_BlueMoon extends CI_Controller
 		$this->load->model('M_Contact');
 		$this->load->model('M_Customer');
 		$this->load->model('M_Kamar');
+		$this->load->model('M_Booking');
+		$this->load->model('M_Payment');
+
 	}
 
 	public function customerAdmin()
@@ -21,6 +24,11 @@ class C_BlueMoon extends CI_Controller
 	public function index()
 	{
 		$this->load->view('V_Home');
+	} 
+
+	public function payment()
+	{
+		$this->load->view('V_payment');
 	} 
 
 	public function contact()
@@ -42,7 +50,38 @@ class C_BlueMoon extends CI_Controller
 	{
 		$this->load->view('V_FormKamar');
 	}
-	
+
+	public function booking()
+	{
+		$datakamar['pilihankamar'] = $this->M_Kamar->getAll();
+		$data['pilihanpayment'] = $this->M_Payment->getAll();
+		$this->load->view('V_Booking', $datakamar);
+	} 
+
+	public function tambahbooking(){
+		$name_cust_booking = $this->input->post('name_cust_booking');
+		$check_in_booking = $this->input->post('check_in_booking');
+		$check_out_booking = $this->input->post('check_out_booking');
+		$room_booking = $this->input->post('room_booking');
+		$id_room = $this->input->post('id_room');
+		$id_user = $this->input->post('id_user');
+		$id_pilihan_bayar = $this->input->post('id_pilihan_bayar');
+		
+		$DataInsert = array(
+			'name_cust_booking' => $name_cust_booking,
+			'check_in_booking' => $cehck_in_booking,
+			'check_out_booking' => $check_out_booking,
+			'room_booking' => $room_booking,
+			'id_room' => $id_room,
+			'id_user' => $id_user,
+			'id_pilihan_bayar'=>$id_pilihan_bayar,
+		);
+		
+		$this->M_Booking->InsertDataBooking($DataInsert);
+		redirect(base_url('C_BlueMoon/booking'));
+	}
+
+
 	public function linkContact(){
 		$data_contact = $this->M_Contact->getAll();
 		$temp['data'] = $data_contact;
@@ -100,7 +139,7 @@ class C_BlueMoon extends CI_Controller
 		);
 		
 		$this->M_Contact->InsertDataContact($DataInsert);
-		redirect(base_url('C_BlueMoon/linkContact'));
+		redirect(base_url('C_BlueMoon/contact'));
 	}
 	
 	public function tambahkamar(){
