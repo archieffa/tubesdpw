@@ -26,6 +26,14 @@ class C_BlueMoon extends CI_Controller
 		$this->load->view('V_Home');
 	} 
 
+	public function room()
+	{
+		$data_kamar = $this->M_Kamar->getAll();
+		$temp['data'] = $data_kamar;
+
+        $this->load->view('V_room',$temp);
+	}
+
 	public function payment()
 	{
 		$this->load->view('V_payment');

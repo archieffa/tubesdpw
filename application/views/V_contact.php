@@ -91,8 +91,8 @@
     </div>
     <!-- Offcanvas Menu Section End -->
 
-    <!-- Header Section Begin -->
-    <header class="header-section header-normal">
+      <!-- Header Section Begin -->
+	  <header class="header-section">
         <div class="top-nav">
             <div class="container">
                 <div class="row">
@@ -110,12 +110,13 @@
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-							<div class="language-option">
-                                <img src="img/flag.jpg" alt="">
+                            <a href="<?php echo base_url('C_BlueMoon/booking');?>" class="bk-btn">Booking Now</a>
+                            <div class="language-option">
+                                <span>Akun</span>
                                 <div class="flag-dropdown">
                                     <ul>
-									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Masuk</a></li>
-									<li><a href="<?php echo base_url('C_BlueMoon/registration');?>">Daftar</a></li>
+									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Profil Saya</a></li>
+									<li><a href="<?php echo site_url('C_BlueMoon/logout');?>" data-togle="modal" data-target="#logoutModal">Keluar</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -130,7 +131,7 @@
                     <div class="col-lg-2">
                         <div class="logo">
                             <a href="./index.html">
-                                <img src="img/BLUE MOON.png" style="width: 500px;" alt="">
+                                <img src="img/BLUE MOON.png" style = "width: 500px;"alt="">
                             </a>
                         </div>
                     </div>
@@ -138,24 +139,14 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-								<li><a href="<?php echo base_url('C_BlueMoon/');?>">Home</a></li>
-                                    <li><a href="./rooms.html">Rooms</a></li>
-                                    <li><a href="./about-us.html">About Us</a></li>
-                                    <li><a href="./pages.html">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="./room-details.html">Room Details</a></li>
-                                            <li><a href="./blog-details.html">Blog Details</a></li>
-                                            <li><a href="#">Family Room</a></li>
-                                            <li><a href="#">Premium Room</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="./blog.html">News</a></li>
-                                    <li class="active"><a href="./contact.html">Contact</a></li>
+									<li class="active"><a href="<?php echo base_url();?>">Home</a></li>
+                                    <li><a href="<?php echo base_url('C_BlueMoon/room');?>">Rooms</a></li>
+                                    <li><a href="<?php echo base_url('C_BlueMoon/contact');?>">Contact</a></li>
                                 </ul>
                             </nav>
                             <div class="nav-right search-switch">
                                 <i class="icon_search"></i>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -163,6 +154,24 @@
         </div>
     </header>
     <!-- Header End -->
+
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Yakin untuk keluar?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">Pilih "Keluar" dibawah ini jika Anda yakin untuk keluar dari akun!</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <a href="<?php echo site_url('C_BlueMoon/logout');?>" class="btn btn-primary">Keluar</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section Begin -->
     <section class="contact-section spad">
@@ -221,8 +230,8 @@
     </section>
     <!-- Contact Section End -->
 
-    <!-- Footer Section Begin -->
-    <footer class="footer-section">
+<!-- Footer Section Begin -->
+<footer class="footer-section">
         <div class="container">
             <div class="footer-text">
                 <div class="row">
@@ -245,7 +254,7 @@
                     </div>
                     <div class="col-lg-3 offset-lg-1">
                         <div class="ft-contact">
-                            <h6>Hubungi Kami</h6>
+                            <h6>Contact Us</h6>
                             <ul>
                                 <li>(+62) 851-7898-1265</li>
                                 <li>bluemoon@gmail.com</li>

@@ -30,13 +30,13 @@ class M_Customer extends CI_Model {
     }
 
 	public function getDataCustomerDetail($id){
-		$this->db->where('id_customer', $id);
+		$this->db->where('id_user', $id);
 		$query = $this->db->get('T_User');
 		return $query->row();
 	}
 
 	public function DeleteDataCustomer($id){
-		$this->db->where('id_customer', $id);
+		$this->db->where('id_user', $id);
 		$this->db->delete('T_User');
 	}
 }

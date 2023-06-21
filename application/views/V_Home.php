@@ -56,7 +56,7 @@
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Booking Now</a>
+                            <a href="<?php echo base_url('C_BlueMoon/booking');?>" class="bk-btn">Booking Now</a>
                             <div class="language-option">
                                 <span>Akun</span>
                                 <div class="flag-dropdown">
@@ -85,10 +85,8 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li class="active"><a href="./index.html">Home</a></li>
-                                    <li><a href="./about-us.html">About Us</a></li>
-                                    <li><a href="./pages.html">Pages</a></li>
-                                    <li><a href="./blog.html">News</a></li>
+                                    <li class="active"><a href="<?php echo base_url();?>">Home</a></li>
+									<li><a href="<?php echo base_url('C_BlueMoon/room');?>">Room</a></li>
                                     <li><a href="<?php echo base_url('C_BlueMoon/contact');?>">Contact</a></li>
                                 </ul>
                             </nav>

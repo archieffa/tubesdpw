@@ -171,8 +171,8 @@
     </header>
     <!-- Header End -->
 
-    <!-- Footer Section Begin -->
-    <footer class="footer-section">
+<!-- Footer Section Begin -->
+<footer class="footer-section">
         <div class="container">
             <div class="footer-text">
                 <div class="row">
@@ -195,7 +195,7 @@
                     </div>
                     <div class="col-lg-3 offset-lg-1">
                         <div class="ft-contact">
-                            <h6>Hubungi Kami</h6>
+                            <h6>Contact Us</h6>
                             <ul>
                                 <li>(+62) 851-7898-1265</li>
                                 <li>bluemoon@gmail.com</li>

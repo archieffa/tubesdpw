@@ -93,14 +93,14 @@
     <!-- Offcanvas Menu Section End -->
 
     <!-- Header Section Begin -->
-    <header class="header-section header-normal">
+    <header class="header-section">
         <div class="top-nav">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <ul class="tn-left">
-                            <li><i class="fa fa-phone"></i> (12) 345 67890</li>
-                            <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
+                            <li><i class="fa fa-phone"></i> (+62) 851-7898-1265</li>
+                            <li><i class="fa fa-envelope"></i> bluemoon@gmail.com</li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
@@ -111,7 +111,7 @@
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Booking Now</a>
+                            <a href="<?php echo base_url('C_BlueMoon/booking');?>" class="bk-btn">Booking Now</a>
                             <div class="language-option">
                                 <span>Akun</span>
                                 <div class="flag-dropdown">
@@ -132,7 +132,7 @@
                     <div class="col-lg-2">
                         <div class="logo">
                             <a href="./index.html">
-                                <img src="img/logo.png" alt="">
+                                <img src="img/BLUE MOON.png" style = "width: 500px;"alt="">
                             </a>
                         </div>
                     </div>
@@ -140,24 +140,14 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li><a href="./index.html">Home</a></li>
-                                    <li><a href="./rooms.html">Rooms</a></li>
-                                    <li><a href="./about-us.html">About Us</a></li>
-                                    <li><a href="./pages.html">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="./room-details.html">Room Details</a></li>
-                                            <li><a href="./blog-details.html">Blog Details</a></li>
-                                            <li><a href="#">Family Room</a></li>
-                                            <li><a href="#">Premium Room</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="active"><a href="./blog.html">News</a></li>
-                                    <li><a href="./contact.html">Contact</a></li>
+									<li class="active"><a href="<?php echo base_url();?>">Home</a></li>
+                                    <li><a href="<?php echo base_url('C_BlueMoon/room');?>">Rooms</a></li>
+                                    <li><a href="<?php echo base_url('C_BlueMoon/contact');?>">Contact</a></li>
                                 </ul>
                             </nav>
                             <div class="nav-right search-switch">
                                 <i class="icon_search"></i>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -165,6 +155,24 @@
         </div>
     </header>
     <!-- Header End -->
+
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Yakin untuk keluar?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">Pilih "Keluar" dibawah ini jika Anda yakin untuk keluar dari akun!</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <a href="<?php echo site_url('C_BlueMoon/logout');?>" class="btn btn-primary">Keluar</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Breadcrumb Section Begin -->
     <div class="breadcrumb-section">
@@ -299,8 +307,8 @@
 		</div>
 	</div></center>
 	<br>
-    <!-- Footer Section Begin -->
-    <footer class="footer-section">
+<!-- Footer Section Begin -->
+<footer class="footer-section">
         <div class="container">
             <div class="footer-text">
                 <div class="row">
@@ -308,7 +316,7 @@
                         <div class="ft-about">
                             <div class="logo">
                                 <a href="#">
-                                    <img src="img/footer-logo.png" alt="">
+                                    <img src="img/BLUE MOON.png" alt="">
                                 </a>
                             </div>
                             <p>We inspire and reach millions of travelers<br /> across 90 local websites</p>
@@ -325,13 +333,13 @@
                         <div class="ft-contact">
                             <h6>Contact Us</h6>
                             <ul>
-                                <li>(12) 345 67890</li>
-                                <li>info.colorlib@gmail.com</li>
+                                <li>(+62) 851-7898-1265</li>
+                                <li>bluemoon@gmail.com</li>
                                 <li>856 Cordia Extension Apt. 356, Lake, United State</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 offset-lg-1">
+                    <!-- <div class="col-lg-3 offset-lg-1">
                         <div class="ft-newslatter">
                             <h6>New latest</h6>
                             <p>Get the latest updates and offers.</p>
@@ -340,7 +348,7 @@
                                 <button type="submit"><i class="fa fa-send"></i></button>
                             </form>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -84,18 +84,8 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li class="active"><a href="./index.html">Home</a></li>
-                                    <li><a href="./rooms.html">Rooms</a></li>
-                                    <li><a href="./about-us.html">About Us</a></li>
-                                    <li><a href="./pages.html">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="./room-details.html">Room Details</a></li>
-                                            <li><a href="./blog-details.html">Blog Details</a></li>
-                                            <li><a href="#">Family Room</a></li>
-                                            <li><a href="#">Premium Room</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="./blog.html">News</a></li>
+									<li class="active"><a href="<?php echo base_url();?>">Home</a></li>
+                                    <li><a href="<?php echo base_url('C_BlueMoon/room');?>">Rooms</a></li>
                                     <li><a href="<?php echo base_url('C_BlueMoon/contact');?>">Contact</a></li>
                                 </ul>
                             </nav>
