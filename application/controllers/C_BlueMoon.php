@@ -103,6 +103,10 @@ class C_BlueMoon extends CI_Controller
 		$this->M_Contact->DeleteDataContact($id_contact);
 		redirect (base_url('C_BlueMoon/linkContact'));
 	}
+	public function AksiDeleteBooking($id_booking){
+		$this->M_Booking->DeleteDataBooking($id_booking);
+		redirect (base_url('C_BlueMoon/linkBooking'));
+	}
 	
 	public function linkCustomer(){
 		$data_customer = $this->M_Customer->getAll();

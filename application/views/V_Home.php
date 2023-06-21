@@ -86,7 +86,6 @@
                             <nav class="mainmenu">
                                 <ul>
                                     <li class="active"><a href="<?php echo base_url();?>">Home</a></li>
-									<li><a href="<?php echo base_url('C_BlueMoon/room');?>">Room</a></li>
                                     <li><a href="<?php echo base_url('C_BlueMoon/contact');?>">Contact</a></li>
                                 </ul>
                             </nav>

@@ -149,6 +149,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <li><a href="<?php echo base_url('C_BlueMoon/linkCustomer');?>">Customer</a></li>
                                     <li><a href="<?php echo base_url('C_BlueMoon/linkBooking');?>">Booking</a></li>
                                     <li><a href="<?php echo base_url('C_BlueMoon/linkContact');?>">Contact</a></li>
+									<li><a href="<?php echo base_url('C_BlueMoon/linkKamar');?>">Kamar</a></li>
 									<li><a href="<?php echo base_url('C_BlueMoon/formkamar');?>">Isi Data</a></li>
                                 </ul>
                                 </ul>
