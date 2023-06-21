@@ -184,7 +184,7 @@
                 <div class="col-lg-4">
                     <div class="room-booking">
                         <h3>Reservasi Anda</h3>
-                        <form action="<?php echo base_url ('C_BlueMoon/tambahkamar')?>" method ="post" class="contact-form">
+                        <form action="<?php echo base_url ('C_BlueMoon/tambahbooking')?>" method ="post" class="contact-form">
 							<div class="check-date">
                                 <label>Nama Lengkap</label>
                                 <input type="text" name = "name_cust_booking">
@@ -199,26 +199,27 @@
                             </div>
                             <div class="select-option">
                                 <label for="guest">Jumlah Tamu</label>
-                                <input type="number" name = "guest_booking">
+                                <input type="number" name = "guests_booking">
                             </div>
                             <div class="select-option">
                                 <label for="room">Jenis Kamar:</label>
                                 <select id="room" name = "room_booking">
-								<?php foreach ($pilihankamar as $kamar):?>
-                                    <option value="<?php echo $kamar->type_room?>"><?php echo $kamar->type_room ?></option>
-									<?php endforeach ?>
-                                </select>
+									<option value = "Premium Room">Premium Room</option>
+									<option value = "Deluxe Room">Deluxe Room</option>
+									<option  value = "Double Room">Double Room</option>
+									<option value = "Suite Room">Suite Room</option>
+										                                </select>
                             </div>
 							<div class="select-option">
                                 <label for="room">Metode Pembayaran :</label>
-                                <select id="room" name = "id_pilihan_bayar">
+                                <select id="room" name = "pilihan_bayar">
 									<?php foreach ($pilihanpayment as $payment):?>
                                     <option value="<?php echo $payment->nama_pilihanbayar?>"><?php echo $payment->nama_pilihanbayar ?></option>
 									<?php endforeach ?>
                                 </select>
                             </div>
-                           <button type="submit" value = "submit">Reservasi Sekarang</button></a>
-                        </form>
+                           <button type="submit" value = "Submit">Reservasi Sekarang</button></a>
+						   <?php echo form_close(); ?>
                     </div>
                 </div>
 				</div>
