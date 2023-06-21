@@ -12,6 +12,10 @@
         <?= $title; ?>
     </title>
 
+    <!-- Favicons -->
+    <link href="img/BLUE_MOON.jpg" rel="icon">
+    <link href="img/BLUE_MOON.jpg" rel="apple-touch-icon">
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">

@@ -8,7 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title>Blue Moon</title>
+    <title>Blue Moon Hotel</title>
+
+    <!-- Favicons -->
+    <link href="img/BLUE_MOON.jpg" rel="icon">
+    <link href="img/BLUE_MOON.jpg" rel="apple-touch-icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">

@@ -7,7 +7,11 @@
     <meta name="keywords" content="Sona, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blue Moon</title>
+    <title>Blue Moon Hotel</title>
+ 
+    <!-- Favicons -->
+    <link href="img/BLUE_MOON.jpg" rel="icon">
+    <link href="img/BLUE_MOON.jpg" rel="apple-touch-icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
@@ -130,28 +134,15 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-10">
+                    <div class="col-lg-6">
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-								<li><a href="<?php echo base_url('C_BlueMoon/index');?>">Home</a></li>
-                                    <li><a href="./rooms.html">Rooms</a></li>
-                                    <li><a href="./about-us.html">About Us</a></li>
-                                    <li><a href="./pages.html">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="./room-details.html">Room Details</a></li>
-                                            <li><a href="./blog-details.html">Blog Details</a></li>
-                                            <li><a href="#">Family Room</a></li>
-                                            <li><a href="#">Premium Room</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="./blog.html">News</a></li>
-                                    <li class="active"><a href="./contact.html">Contact</a></li>
+                                    <li><a href="./rooms.html">Customer</a></li>
+                                    <li><a href="./about-us.html">Booking</a></li>
+                                    <li><a href="./pages.html">Contact</a></li>
                                 </ul>
                             </nav>
-                            <div class="nav-right search-switch">
-                                <i class="icon_search"></i>
-                            </div>
                         </div>
                     </div>
                 </div>

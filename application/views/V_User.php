@@ -7,7 +7,11 @@
     <meta name="keywords" content="Sona, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blue Moon</title>
+    <title>Blue Moon Hotel</title>
+
+    <!-- Favicons -->
+    <link href="img/BLUE_MOON.jpg" rel="icon">
+    <link href="img/BLUE_MOON.jpg" rel="apple-touch-icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
@@ -57,7 +61,7 @@
                                 <div class="flag-dropdown">
                                     <ul>
 									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Profil Saya</a></li>
-									<li><a data-togle="modal" data-target="#logoutModal">Keluar</a></li>
+									<li><a href="<?php echo site_url('C_BlueMoon/logout');?>" data-togle="modal" data-target="#logoutModal">Keluar</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -107,17 +111,18 @@
     <!-- Header End -->
 
     <!-- Logout Modal -->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Yakin untuk keluar?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&</span></button>
+                    <h5 class="modal-title" id="logoutModalLabel">Yakin untuk keluar?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">Pilih "Keluar" dibawah ini jika Anda yakin untuk keluar dari akun!</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-primary" href="<?php echo base_url('C_BlueMoon/logout');?>">Keluar</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <a href="<?php echo site_url('C_BlueMoon/logout');?>" class="btn btn-primary">Keluar</a>
                 </div>
             </div>
         </div>
@@ -127,13 +132,8 @@
     <section class="hero-section">
         <div class="container">
             <div class="row">
-                    <div class="hero-text">
-<<<<<<< HEAD
-                        
+                    <div class="hero-text">       
                         <center><h1>Selamat Datang, <?= $user['nama_lengkap']; ?></h1></center>
-=======
-                        <center><h1>Selamat Datang, <?php echo $this->session->userdata('nama_lengkap');?></h1></center>
->>>>>>> cba966ddf0c4dcb4e108ae924d03092838fa8b3a
                         <center><p>Tingkatkan pengalaman Anda dengan menginap di hotel kami. Dengan lokasi strategis di pusat kota, 
 							Anda dapat menjelajahi atraksi lokal dengan mudah dan mengisi hari-hari Anda dengan petualangan yang tak terlupakan.</p></center>
                         <center><a href="#" class="primary-btn">Discover Now</a></center>
@@ -240,133 +240,6 @@
         </div>
     </section>
     <!-- Services Section End -->
-
-    <!-- Home Room Section Begin -->
-    <section class="hp-room-section">
-        <div class="container-fluid">
-            <div class="hp-room-items">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b1.jpg">
-                            <div class="hr-text">
-                                <h3>Double Room</h3>
-                                <h2>199$<span>/Pernight</span></h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="primary-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b2.jpg">
-                            <div class="hr-text">
-                                <h3>Premium King Room</h3>
-                                <h2>159$<span>/Pernight</span></h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="primary-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b3.jpg">
-                            <div class="hr-text">
-                                <h3>Deluxe Room</h3>
-                                <h2>198$<span>/Pernight</span></h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="primary-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b4.jpg">
-                            <div class="hr-text">
-                                <h3>Family Room</h3>
-                                <h2>299$<span>/Pernight</span></h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="primary-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Home Room Section End -->
 
     <!-- Testimonial Section Begin -->
     <section class="testimonial-section spad">

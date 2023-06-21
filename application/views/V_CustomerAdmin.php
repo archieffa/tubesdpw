@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 //Tampilkan judul
 ?>
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -16,18 +13,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="keywords" content="Sona, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blue Moon</title>
+    <title>Blue Moon Hotel</title>
+
+    <!-- Favicons -->
+    <link href="img/BLUE_MOON.jpg" rel="icon">
+    <link href="img/BLUE_MOON.jpg" rel="apple-touch-icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-<<<<<<< HEAD
-	<link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css');?>">
-=======
     <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css');?>">
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
     <link rel="stylesheet" href="<?php echo base_url('css/font-awesome.min.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('css/elegant-icons.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('css/flaticon.css');?>">
@@ -96,21 +93,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <ul class="top-widget">
             <li><i class="fa fa-phone"></i> (+62) 851-7898-1265</li>
-<<<<<<< HEAD
-            <li><i class="fa fa-envelope"></i> bulemoon@gmail.com</li>
-=======
             <li><i class="fa fa-envelope"></i> bluemoon@gmail.com</li>
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
         </ul>
     </div>
     <!-- Offcanvas Menu Section End -->
 
     <!-- Header Section Begin -->
-<<<<<<< HEAD
-    <header class="header-section header-normal">
-=======
     <header class="header-section">
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
         <div class="top-nav">
             <div class="container">
                 <div class="row">
@@ -128,14 +117,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-<<<<<<< HEAD
-							<div class="language-option">
-                                <img src="img/flag.jpg" alt="">
-=======
                             <a href="#" class="bk-btn">Booking Now</a>
                             <div class="language-option">
                                 <span><i class="fa fa-angle-down"></i></span>
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
                                 <div class="flag-dropdown">
                                     <ul>
 									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Masuk</a></li>
@@ -323,11 +307,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div class="col-lg-3 offset-lg-1">
                         <div class="ft-contact">
-<<<<<<< HEAD
-                            <h6>Hubungi Kami</h6>
-=======
                             <h6>Contact Us</h6>
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
                             <ul>
                                 <li>(+62) 851-7898-1265</li>
                                 <li>bluemoon@gmail.com</li>

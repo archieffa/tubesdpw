@@ -8,12 +8,10 @@ class C_BlueMoon extends CI_Controller
 	{
 		parent::__construct();  // memanggil method construct yang ada di CI_Controller
 		$this->load->library('form_validation');
-<<<<<<< HEAD
-=======
+
 		$this->load->model('M_Contact');
 		$this->load->model('M_Customer');
 		$this->load->model('M_Kamar');
->>>>>>> cba966ddf0c4dcb4e108ae924d03092838fa8b3a
 	}
 
 	public function customerAdmin()
@@ -40,41 +38,36 @@ class C_BlueMoon extends CI_Controller
 	{
 		$this->load->view('V_ContactAdmin');
 	}
-<<<<<<< HEAD
-=======
 
 	public function formkamar()
 	{
 		$this->load->view('V_FormKamar');
 	}
->>>>>>> cba966ddf0c4dcb4e108ae924d03092838fa8b3a
 	
-	public function linkContact(){
+	public function linkContact()
+	{
 		$data_contact = $this->M_Contact->getAll();
 		$temp['data'] = $data_contact;
 
         $this->load->view('V_ContactAdmin',$temp);
 	}
 	
-	public function AksiDeletecontact($id_contact){
+	public function AksiDeletecontact($id_contact)
+	{
 		$this->M_Contact->DeleteDataContact($id_contact);
 		redirect (base_url('C_BlueMoon/linkContact'));
 	}
-<<<<<<< HEAD
-=======
 	
-	
-	
->>>>>>> cba966ddf0c4dcb4e108ae924d03092838fa8b3a
-	
-	public function linkCustomer(){
+	public function linkCustomer()
+	{
 		$data_customer = $this->M_Customer->getAll();
 		$temp['data'] = $data_customer;
 
         $this->load->view('V_CustomerAdmin',$temp);
 	}
 	
-	public function AksiDeletecustomer($id_customer){
+	public function AksiDeletecustomer($id_customer)
+	{
 		$this->M_Customer->DeleteDataCustomer($id_customer);
 		redirect (base_url('C_BlueMoon/linkCustomer'));
 	}
@@ -84,20 +77,23 @@ class C_BlueMoon extends CI_Controller
 		$this->load->view('V_KamarAdmin');
 	}
 	
-	public function linkKamar(){
+	public function linkKamar()
+	{
 		$data_kamar = $this->M_Kamar->getAll();
 		$temp['data'] = $data_kamar;
 
         $this->load->view('V_KamarAdmin',$temp);
 	}
 	
-	public function AksiDeleteKamar($id_kamar){
+	public function AksiDeleteKamar($id_kamar)
+	{
 		$this->M_Kamar->DeleteDataKamar($id_kamar);
 		redirect (base_url('C_BlueMoon/linkKamar'));
 	}
 
 	
-	public function tambahcontact(){
+	public function tambahcontact()
+	{
 		$nama_contact = $this->input->post('nama_contact');
 		$email_contact = $this->input->post('email_contact');
 		$pesan_contact = $this->input->post('pesan_contact');
@@ -112,7 +108,8 @@ class C_BlueMoon extends CI_Controller
 		redirect(base_url('C_BlueMoon/linkContact'));
 	}
 	
-	public function tambahkamar(){
+	public function tambahkamar()
+	{
 		$type_room = $this->input->post('type_room');
 		$price_room = $this->input->post('price_room');
 		$size_room = $this->input->post('size_room');
@@ -145,14 +142,16 @@ class C_BlueMoon extends CI_Controller
 		redirect(base_url('C_BlueMoon/linkKamar'));
 	}
 
-	public function editKamar($id){
+	public function editKamar($id)
+	{
 		$recordKamar= $this->M_Kamar->getDataKamarDetail($id);
 		$DATA = array('data_room' =>$recordKamar);
 		$this->load->view('V_editKamar', $DATA);
 
 	}
 	
-	public function AksiEditKamar(){
+	public function AksiEditKamar()
+	{
 		$id_room = $this->input->post('id_room');
 		$type_room = $this->input->post('type_room');
 		$price_room = $this->input->post('price_room');
@@ -231,7 +230,7 @@ class C_BlueMoon extends CI_Controller
 				}
 				else
 				{
-					redirect('V_Admin');
+					redirect('C_Admin');
 				}
 			}
 			else
