@@ -32,62 +32,6 @@
         <div class="loader"></div>
     </div> -->
 
-    <!-- Offcanvas Menu Section Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="canvas-open">
-        <i class="icon_menu"></i>
-    </div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="canvas-close">
-            <i class="icon_close"></i>
-        </div>
-        <div class="search-icon  search-switch">
-            <i class="icon_search"></i>
-        </div>
-        <div class="header-configure-area">
-            <div class="language-option">
-                <img src="img/flag.jpg" alt="">
-                <span>EN <i class="fa fa-angle-down"></i></span>
-                <div class="flag-dropdown">
-                    <ul>
-                        <li><a href="<?php echo site_url('C_BlueMoon/login');?>">Masuk</a></li>
-                        <li><a href="V_Registration.php">Daftar</a></li>
-                    </ul>
-                </div>
-            </div>
-            <a href="#" class="bk-btn">Booking Now</a>
-        </div>
-        <nav class="mainmenu mobile-menu">
-            <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./rooms.html">Rooms</a></li>
-                <li><a href="./about-us.html">About Us</a></li>
-                <li><a href="./pages.html">Pages</a>
-                    <ul class="dropdown">
-                        <li><a href="./room-details.html">Room Details</a></li>
-                        <li><a href="#">Deluxe Room</a></li>
-                        <li><a href="#">Family Room</a></li>
-                        <li><a href="#">Premium Room</a></li>
-                    </ul>
-                </li>
-                <li><a href="./blog.html">News</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-        <div class="top-social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-tripadvisor"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-        </div>
-        <ul class="top-widget">
-            <li><i class="fa fa-phone"></i> (+62) 851-7898-1265</li>
-            <li><i class="fa fa-envelope"></i> bluemoon@gmail.com</li>
-        </ul>
-    </div>
-    <!-- Offcanvas Menu Section End -->
-
     <!-- Header Section Begin -->
     <header class="header-section">
         <div class="top-nav">
@@ -112,8 +56,8 @@
                                 <span><i class="fa fa-angle-down"></i></span>
                                 <div class="flag-dropdown">
                                     <ul>
-									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Masuk</a></li>
-									<li><a href="<?php echo base_url('C_BlueMoon/registration');?>">Daftar</a></li>
+									<li><a href="<?php echo base_url('C_BlueMoon/login');?>">Profil Saya</a></li>
+									<li><a data-togle="modal" data-target="#logoutModal">Keluar</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -162,16 +106,30 @@
     </header>
     <!-- Header End -->
 
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Yakin untuk keluar?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&</span></button>
+                </div>
+                <div class="modal-body">Pilih "Keluar" dibawah ini jika Anda yakin untuk keluar dari akun!</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-primary" href="<?php echo base_url('C_BlueMoon/logout');?>">Keluar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Hero Section Begin -->
     <section class="hero-section">
         <div class="container">
             <div class="row">
                     <div class="hero-text">
-<<<<<<< HEAD
+                        
                         <center><h1>Selamat Datang, <?= $user['nama_lengkap']; ?></h1></center>
-=======
-                        <center><h1>Selamat Datang, <?php echo $this->session->userdata('nama_lengkap');?></h1></center>
->>>>>>> d85fc4338127f38f5e731a040671be00118fb33f
                         <center><p>Tingkatkan pengalaman Anda dengan menginap di hotel kami. Dengan lokasi strategis di pusat kota, 
 							Anda dapat menjelajahi atraksi lokal dengan mudah dan mengisi hari-hari Anda dengan petualangan yang tak terlupakan.</p></center>
                         <center><a href="#" class="primary-btn">Discover Now</a></center>
@@ -421,10 +379,9 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="testimonial-slider owl-carousel">
                         <div class="ts-item">
-                            <p>After a construction project took longer than expected, my husband, my daughter and I
-                                needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
-                                city, neighborhood and the types of housing options available and absolutely love our
-                                vacation at Sona Hotel.</p>
+                            <p>Kamarnya bersih. Fasilitasnya juga lengkap dan suasananya tenang. Lumayan menyenangkan
+                                nginap disini. Thanks Blue Moon.
+                            </p>
                             <div class="ti-author">
                                 <div class="rating">
                                     <i class="icon_star"></i>
@@ -433,15 +390,14 @@
                                     <i class="icon_star"></i>
                                     <i class="icon_star-half_alt"></i>
                                 </div>
-                                <h5> - Alexander Vasquez</h5>
+                                <h5> - Marcello Este Camarro</h5>
                             </div>
                             <img src="img/testimonial-logo.png" alt="">
                         </div>
                         <div class="ts-item">
-                            <p>After a construction project took longer than expected, my husband, my daughter and I
-                                needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
-                                city, neighborhood and the types of housing options available and absolutely love our
-                                vacation at Sona Hotel.</p>
+                            <p>Bagus banget! Kamarnya luas, peralatan lengkap. Sesuai sama foto dan keterangan. 
+                                Fasilitasnya juga lengkap dan servicenya baik. Pasti akan stay lagi di sini.
+                            </p>
                             <div class="ti-author">
                                 <div class="rating">
                                     <i class="icon_star"></i>
@@ -450,7 +406,55 @@
                                     <i class="icon_star"></i>
                                     <i class="icon_star-half_alt"></i>
                                 </div>
-                                <h5> - Alexander Vasquez</h5>
+                                <h5> - Junhyeon</h5>
+                            </div>
+                            <img src="img/testimonial-logo.png" alt="">
+                        </div>
+                        <div class="ts-item">
+                            <p>Interiornya bagus banget, super comfy and homey, recommended buat liburan sama temen
+                                /keluarga. Segala sudut di foto auto estetik!
+                            </p>
+                            <div class="ti-author">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                </div>
+                                <h5> - Syifa Azzahra</h5>
+                            </div>
+                            <img src="img/testimonial-logo.png" alt="">
+                        </div>
+                        <div class="ts-item">
+                            <p>Akomodasi ini cocok untuk menginap bersama teman ataupun keluarga, semuanya bagus. 
+                                Kekurangannya hanya di proses check-in dan check-out yang sedikit susah.
+                            </p>
+                            <div class="ti-author">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div>
+                                <h5> - Dokyeom</h5>
+                            </div>
+                            <img src="img/testimonial-logo.png" alt="">
+                        </div>
+                        <div class="ts-item">
+                            <p>Sesuai ekspektasi! Kamarnya bener-bener bagus dan estetik, yang terpenting bersih. 
+                                Host sangat ramah dan fast respon
+                            </p>
+                            <div class="ti-author">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                </div>
+                                <h5> - Amelia</h5>
                             </div>
                             <img src="img/testimonial-logo.png" alt="">
                         </div>

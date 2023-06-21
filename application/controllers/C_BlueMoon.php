@@ -8,8 +8,6 @@ class C_BlueMoon extends CI_Controller
 	{
 		parent::__construct();  // memanggil method construct yang ada di CI_Controller
 		$this->load->library('form_validation');
-		$this->load->model('M_Contact');
-		$this->load->model('M_Customer');
 	}
 
 	public function customerAdmin()
@@ -37,8 +35,6 @@ class C_BlueMoon extends CI_Controller
 		$this->load->view('V_ContactAdmin');
 	}
 	
-	
-	
 	public function linkContact(){
 		$data_contact = $this->M_Contact->getAll();
 		$temp['data'] = $data_contact;
@@ -50,13 +46,6 @@ class C_BlueMoon extends CI_Controller
 		$this->M_Contact->DeleteDataContact($id_contact);
 		redirect (base_url('C_BlueMoon/linkContact'));
 	}
-
-	public function customeradmin()
-	{
-		$this->load->view('V_CustomerAdmin');
-	}
-	
-	
 	
 	public function linkCustomer(){
 		$data_customer = $this->M_Customer->getAll();
@@ -125,10 +114,14 @@ class C_BlueMoon extends CI_Controller
 				];
 				$this->session->set_userdata($data);
 
-				// if($user['id_role'] == 2)  // jika user merupakan admin
-				// {
-				// 	redirect('C_Customer');
-				// }
+				if($user['id_role'] == 2)  // jika user merupakan admin
+				{
+					redirect('C_Customer');
+				}
+				else
+				{
+					redirect('V_Admin');
+				}
 			}
 			else
 			{
