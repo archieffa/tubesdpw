@@ -91,6 +91,7 @@
     </div>
     <!-- Offcanvas Menu Section End -->
 
+	
     <!-- Header Section Begin -->
     <header class="header-section header-normal">
         <div class="top-nav">
@@ -124,6 +125,23 @@
                 </div>
             </div>
         </div>
+		<section class="hero-section">
+        <div class="container">
+            <div class="row">
+                    <div class="hero-text">
+                        <center><h1>Admin Page</h1></center>
+                        <center><p>Tingkatkan pengalaman Anda dengan menginap di hotel kami. Dengan lokasi strategis di pusat kota, 
+							Anda dapat menjelajahi atraksi lokal dengan mudah dan mengisi hari-hari Anda dengan petualangan yang tak terlupakan.</p></center>
+                        <center><a href="#" class="primary-btn">Discover Now</a></center>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slider owl-carousel">
+            <div class="hs-item set-bg" data-setbg="img/hero/hero-1.jpg"></div>
+            <div class="hs-item set-bg" data-setbg="img/hero/hero-2.jpg"></div>
+            <div class="hs-item set-bg" data-setbg="img/hero/hero-3.jpg"></div>
+        </div>
+    </section>
         <div class="menu-item">
             <div class="container">
                 <div class="row">
@@ -135,16 +153,18 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="nav-menu">
+                        <center><div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li><a href="./rooms.html">Customer</a></li>
-                                    <li><a href="./about-us.html">Booking</a></li>
-                                    <li><a href="./pages.html">Contact</a></li>
+                                    <li><a href="<?php echo base_url('C_BlueMoon/linkCustomer');?>">Customer</a></li>
+                                    <li><a href="<?php echo base_url('C_BlueMoon/linkBooking');?>">Booking</a></li>
+                                    <li><a href="<?php echo base_url('C_BlueMoon/linkContact');?>">Contact</a></li>
+									<li><a href="<?php echo base_url('C_BlueMoon/formkamar');?>">Isi Data</a></li>
                                 </ul>
                             </nav>
+
                         </div>
-                    </div>
+                    </div></center>
                 </div>
             </div>
         </div>

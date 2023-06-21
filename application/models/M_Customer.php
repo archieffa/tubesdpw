@@ -25,18 +25,18 @@ class M_Customer extends CI_Model {
 
     public function getAll()
     {
-        $query = $this->db->query("SELECT * from T_Customer");
+        $query = $this->db->query("SELECT * from T_User");
 		return $query->result();
     }
 
 	public function getDataCustomerDetail($id){
 		$this->db->where('id_customer', $id);
-		$query = $this->db->get('T_Customer');
+		$query = $this->db->get('T_User');
 		return $query->row();
 	}
 
 	public function DeleteDataCustomer($id){
 		$this->db->where('id_customer', $id);
-		$this->db->delete('T_Customer');
+		$this->db->delete('T_User');
 	}
 }

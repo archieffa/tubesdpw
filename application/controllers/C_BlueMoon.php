@@ -50,14 +50,6 @@ class C_BlueMoon extends CI_Controller
 	{
 		$this->load->view('V_FormKamar');
 	}
-<<<<<<< HEAD
-
-	public function room()
-	{
-		$this->load->view('V_Room');
-	} 
-=======
->>>>>>> 4f36c0fafefa7a4ce83ce2f4e960a374742340e6
 
 	public function booking()
 	{
@@ -104,12 +96,6 @@ class C_BlueMoon extends CI_Controller
 		redirect (base_url('C_BlueMoon/linkContact'));
 	}
 	
-<<<<<<< HEAD
-=======
-	
-	
-	
->>>>>>> 4f36c0fafefa7a4ce83ce2f4e960a374742340e6
 	public function linkCustomer(){
 		$data_customer = $this->M_Customer->getAll();
 		$temp['data'] = $data_customer;
@@ -139,13 +125,8 @@ class C_BlueMoon extends CI_Controller
 		redirect (base_url('C_BlueMoon/linkKamar'));
 	}
 
-<<<<<<< HEAD
 	public function tambahcontact()
 	{
-=======
-	
-	public function tambahcontact(){
->>>>>>> 4f36c0fafefa7a4ce83ce2f4e960a374742340e6
 		$nama_contact = $this->input->post('nama_contact');
 		$email_contact = $this->input->post('email_contact');
 		$pesan_contact = $this->input->post('pesan_contact');
@@ -273,7 +254,6 @@ class C_BlueMoon extends CI_Controller
 				];
 				$this->session->set_userdata($data);
 
-<<<<<<< HEAD
 				if($user['id_role'] == 2)  // jika user merupakan admin
 				{
 					redirect('C_Customer');
@@ -282,12 +262,6 @@ class C_BlueMoon extends CI_Controller
 				{
 					redirect('C_Admin');
 				}
-=======
-				// if($user['id_role'] == 2)  // jika user merupakan admin
-				// {
-				// 	redirect('C_Customer');
-				// }
->>>>>>> 4f36c0fafefa7a4ce83ce2f4e960a374742340e6
 			}
 			else
 			{
